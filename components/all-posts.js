@@ -10,7 +10,7 @@ export default function AllPosts({ posts }) {
             title={post.title}
             coverImage={post.coverImage}
             date={post.date}
-            author={post.author}
+            postAuthor={post.postAuthor}
             slug={post.slug}
             excerpt={post.excerpt}
           />

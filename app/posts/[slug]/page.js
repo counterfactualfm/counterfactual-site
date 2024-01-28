@@ -49,10 +49,10 @@ const PAGE_CONTENT_QUERY = `
           ...responsiveImageFragment
         }
       }
-      author {
+      postAuthor {
         name
         picture {
-          responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
+          responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100}) {
             ...responsiveImageFragment
           }
         }
@@ -69,10 +69,10 @@ const PAGE_CONTENT_QUERY = `
           ...responsiveImageFragment
         }
       }
-      author {
+      postAuthor {
         name
         picture {
-          responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
+          responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100}) {
             ...responsiveImageFragment
           }
         }
