@@ -11,8 +11,7 @@ module.exports = {
         cyan: "#79FFE1",
       },
       fontFamily: {
-        sans: ["Graphik", "sans-serif"],
-        serif: ["IBM Plex Serif", "serif"],
+        serif: ["var(--font-ibm-plex-serif)"],
       },
       spacing: {
         28: "7rem",

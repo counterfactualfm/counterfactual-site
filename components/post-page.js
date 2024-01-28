@@ -1,5 +1,5 @@
+import AllPosts from "./all-posts";
 import Header from "./header";
-import MoreStories from "./more-stories";
 import PostBody from "./post-body";
 import PostHeader from "./post-header";
 import SectionSeparator from "./section-separator";
@@ -20,7 +20,7 @@ export function PostPage({ data }) {
         <PostBody content={post.content} />
       </article>
       <SectionSeparator />
-      {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+      {morePosts.length > 0 && <AllPosts posts={morePosts} />}
     </>
   );
 }

@@ -70,7 +70,7 @@ export async function POST(request) {
         request: error.request,
         response: error.response,
       },
-      { ...corsInitOptions, status: 500 }
+      { ...corsInitOptions, status: 500 },
     );
   }
 }

@@ -16,7 +16,7 @@ export async function GET(request) {
       {
         message: "Missing or invalid `secret` query string parameter!",
       },
-      { status: 401 }
+      { status: 401 },
     );
   }
 
@@ -25,7 +25,7 @@ export async function GET(request) {
   // Redirect to the homepage, or to the URL provided with the `redirect` query string parameter:
   const redirectUrl = new URL(
     searchParams.get("redirect") || "/",
-    "https://example.com"
+    "https://example.com",
   );
 
   redirect(`${redirectUrl.pathname}${redirectUrl.search}`);

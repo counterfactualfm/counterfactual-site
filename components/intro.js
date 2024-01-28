@@ -1,7 +1,7 @@
 export default function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl md:text-8xl font-semibold tracking-tighter leading-tight md:pr-8 text-teal-800">
+    <section className="mb-16 mt-16 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
+      <h1 className="text-6xl font-semibold leading-tight tracking-tighter text-teal-800 md:pr-8 md:text-8xl">
         Counterfactual
       </h1>
     </section>

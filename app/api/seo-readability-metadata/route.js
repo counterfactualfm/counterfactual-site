@@ -42,17 +42,17 @@ export async function GET(request) {
 
   const result = findSlugAndUrlForItem(
     item,
-    searchParams.get("itemTypeApiKey")
+    searchParams.get("itemTypeApiKey"),
   );
 
   if (!result) {
     return NextResponse.json(
       {
         error: `Record #${searchParams.get(
-          "itemId"
+          "itemId",
         )} does not have a route on the frontend!`,
       },
-      { ...corsInitOptions, status: 422 }
+      { ...corsInitOptions, status: 422 },
     );
   }
 
@@ -87,7 +87,7 @@ export async function GET(request) {
       {
         error: `Page ${url} does not have an element with ID "main-content"!`,
       },
-      { ...corsInitOptions, status: 422 }
+      { ...corsInitOptions, status: 422 },
     );
   }
 
@@ -107,6 +107,6 @@ export async function GET(request) {
       description,
       content,
     },
-    corsInitOptions
+    corsInitOptions,
   );
 }
