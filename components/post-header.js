@@ -7,7 +7,7 @@ export default function PostHeader({ title, coverImage, date, postAuthor }) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="-mx-5 mb-8 sm:mx-0 md:mb-16">
+      <div className="mb-8 sm:mx-0 md:mb-16">
         <CoverImage
           title={title}
           responsiveImage={coverImage.responsiveImage}
