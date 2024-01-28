@@ -10,7 +10,7 @@ export default function Avatar({ name, picture }) {
           className="rounded-full"
         />
       </div>
-      <div className="text-xl font-bold">{name}</div>
+      <div className="text-xl font-semibold">{name}</div>
     </div>
   );
 }

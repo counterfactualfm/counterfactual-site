@@ -49,10 +49,7 @@ async function installSeoReadabilityPlugin(client) {
 */
 
 export async function OPTIONS(request) {
-  return NextResponse.json(
-    { success: true },
-    corsInitOptions,
-  );
+  return NextResponse.json({ success: true }, corsInitOptions);
 }
 
 export async function POST(request) {

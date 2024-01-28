@@ -1,9 +1,6 @@
 module.exports = {
   mode: "jit",
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -12,6 +9,10 @@ module.exports = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
+      },
+      fontFamily: {
+        sans: ["Graphik", "sans-serif"],
+        serif: ["IBM Plex Serif", "serif"],
       },
       spacing: {
         28: "7rem",

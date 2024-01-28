@@ -12,9 +12,12 @@ export async function GET(request) {
 
   // Check the secret and next parameters
   if (secret && searchParams.get("secret") !== secret) {
-    return NextResponse.json({
-      message: "Missing or invalid `secret` query string parameter!",
-    }, { status: 401 });
+    return NextResponse.json(
+      {
+        message: "Missing or invalid `secret` query string parameter!",
+      },
+      { status: 401 }
+    );
   }
 
   draftMode().enable();

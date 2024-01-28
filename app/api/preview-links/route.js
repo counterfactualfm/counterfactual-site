@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 const corsInitOptions = {
   headers: {
@@ -9,10 +9,10 @@ const corsInitOptions = {
 };
 
 const baseUrl = process.env.VERCEL_BRANCH_URL
-? // Vercel auto-populates this environment variable
-  `https://${process.env.VERCEL_BRANCH_URL}`
-: // Netlify auto-populates this environment variable
-  process.env.URL;
+  ? // Vercel auto-populates this environment variable
+    `https://${process.env.VERCEL_BRANCH_URL}`
+  : // Netlify auto-populates this environment variable
+    process.env.URL;
 
 /*
   This endpoint is for the Web Previews DatoCMS plugin:
@@ -26,7 +26,7 @@ const baseUrl = process.env.VERCEL_BRANCH_URL
 
 const findUrlForItem = ({ item, itemType }) => {
   switch (itemType.attributes.api_key) {
-    case 'post':
+    case "post":
       return `/posts/${item.attributes.slug}`;
     default:
       return null;
@@ -34,10 +34,7 @@ const findUrlForItem = ({ item, itemType }) => {
 };
 
 export async function OPTIONS(request) {
-  return NextResponse.json(
-    { success: true },
-    corsInitOptions,
-  );
+  return NextResponse.json({ success: true }, corsInitOptions);
 }
 
 export async function POST(request) {
@@ -50,16 +47,16 @@ export async function POST(request) {
 
   const previewLinks = [
     {
-      label: 'Published version',
+      label: "Published version",
       url: `${baseUrl}${url}`,
     },
     {
-      label: 'Draft version',
+      label: "Draft version",
       url: `${baseUrl}/api/draft?redirect=${url}&secret=${
-        process.env.NEXT_DATOCMS_PREVIEW_SECRET || ''
+        process.env.NEXT_DATOCMS_PREVIEW_SECRET || ""
       }`,
     },
   ];
 
   return NextResponse.json({ previewLinks }, corsInitOptions);
-};
+}
