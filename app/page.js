@@ -4,7 +4,6 @@ import { toNextMetadata } from "react-datocms";
 import { performRequest } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
 
-import { DraftPostIndex } from "@/components/draft-post-index";
 import { PostIndex } from "@/components/post-index";
 
 const PAGE_CONTENT_QUERY = `
@@ -57,23 +56,8 @@ export async function generateMetadata() {
 }
 
 export default async function Page() {
-  const { isEnabled } = draftMode();
-
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
-
-  if (isEnabled) {
-    return (
-      <DraftPostIndex
-        subscription={{
-          ...pageRequest,
-          initialData: data,
-          token: process.env.NEXT_DATOCMS_API_TOKEN,
-          environment: process.env.NEXT_DATOCMS_ENVIRONMENT || null,
-        }}
-      />
-    );
-  }
 
   return <PostIndex data={data} />;
 }
